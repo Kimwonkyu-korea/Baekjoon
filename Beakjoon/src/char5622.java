@@ -6,34 +6,38 @@ public class char5622 {
 
 		Scanner sc = new Scanner(System.in);
 
+		String Str = sc.next();
+
 		int sum = 0;
 
-		while(true) {
-			// 문자열을 하나씩 입력 
-			int read = sc.nextInt();
-
-			// Enter가 입력되면 break; 
-			if(read < 'A') 
-				break; 
-			// 각 문자마다 값을 계산 
-			else if(read < 'D') 
-				sum += 3; 
-			else if(read < 'G') 
-				sum += 4; 
-			else if(read < 'J') 
-				sum += 5; 
-			else if(read < 'M') 
-				sum += 6; 
-			else if(read < 'P') 
-				sum += 7; 
-			else if(read < 'T') 
-				sum += 8; 
-			else if(read < 'W') 
-				sum += 9; 
-			else if(read < '[') 
-				sum += 10; 
-			} 
-		// 결과 출력 
-		System.out.print(sum); 
+		for(int i =0; i < Str.length(); i++) {
+			char c = Str.charAt(i);
+			// 알파벳이 ABC 중 하나라면 + 3초
+			if (c >= 'A' && c <= 'C') {
+				sum += 3;
+				// 알파벳이 DEF 중 하나라면 + 4초
+			} else if (c >= 'D' && c <= 'F'){
+				sum +=4;
+				// 알파벳이 GHI 중 하나라면 + 5초
+			} else if (c >= 'G' && c <= 'I'){
+				sum +=5;
+				// 알파벳이 JKL 중 하나라면 + 6초
+			}else if (c >= 'J' && c <= 'L'){
+				sum +=6;
+				// 알파벳이 MNO 중 하나라면 + 7초
+			}else if (c >= 'M' && c <= 'O'){
+				sum +=7;
+				// 알파벳이 PQRS 중 하나라면 + 8초
+			}else if (c >= 'P' && c <= 'S'){
+				sum +=8;
+				// 알파벳이 TUV 중 하나라면 + 9초
+			}else if (c >= 'T' && c <= 'V'){
+				sum +=9;
+				// 알파벳이 WXYZ 중 하나라면 + 10초
+			}else if (c >= 'W' && c <= 'Z'){
+				sum +=10;
+			}
+		}
+		System.out.println(sum);
 	}
 }
